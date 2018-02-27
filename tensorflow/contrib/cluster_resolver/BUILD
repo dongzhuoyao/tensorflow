@@ -30,10 +30,12 @@ py_library(
         "python/training/__init__.py",
     ],
     srcs_version = "PY2AND3",
+    visibility = ["//visibility:public"],
     deps = [
         ":cluster_resolver_py",
         ":gce_cluster_resolver_py",
         ":tpu_cluster_resolver_py",
+        "//tensorflow/python:util",
     ],
 )
 
